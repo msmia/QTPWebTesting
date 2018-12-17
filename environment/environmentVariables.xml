@@ -1,0 +1,6 @@
+<Environment>
+	<Variable>
+		<Name>projectFolderName</Name>
+		<Value>QTPWebTesting</Value>
+	</Variable>		
+</Environment>

@@ -1,0 +1,1 @@
+﻿var __testDataSource={items:[{dataFilePath:'Default.xls',dataFileFormat:'excel',dataFileFolder:'C:\\QA\\GIT\\QTPWebTesting\\object_repositories\\BadUser\\Report',namePairs:[]}]};

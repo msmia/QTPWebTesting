@@ -12,12 +12,11 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-Action1=Action5\Script.mts
-editOrder=Action6\Script.mts
-Driver [ReusableActions]=Action5\Script.mts
-sginin [ReusableActions]=Action1\Script.mts
-placeOrder [ReusableActions]=Action2\Script.mts
-signout [ReusableActions]=Action4\Script.mts
+sginin=Action1\Script.mts
+placeOrder=Action2\Script.mts
+editOrder=Action3\Script.mts
+signout=Action4\Script.mts
+Driver=Action5\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -47,8 +46,8 @@ Insight=
 Java=
 Windows Applications=
 TEA=
+UI Automation=
 Web=
-WPF=
 XML=
 
 [ExtraFiles]
@@ -58,18 +57,18 @@ Parameters.mtr=
 Action0\Script.mts=
 Action0\Resource.mtr=
 Action0\ObjectRepository.bdb=
-Action5\Script.mts=
-Action5\Resource.mtr=
-Action5\ObjectRepository.bdb=
-Action6\Script.mts=
-Action6\Resource.mtr=
-Action6\ObjectRepository.bdb=
 Action1\Script.mts=
 Action1\Resource.mtr=
 Action1\ObjectRepository.bdb=
 Action2\Script.mts=
 Action2\Resource.mtr=
 Action2\ObjectRepository.bdb=
+Action3\Script.mts=
+Action3\Resource.mtr=
+Action3\ObjectRepository.bdb=
 Action4\Script.mts=
 Action4\Resource.mtr=
 Action4\ObjectRepository.bdb=
+Action5\Script.mts=
+Action5\Resource.mtr=
+Action5\ObjectRepository.bdb=
