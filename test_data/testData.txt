@@ -1,0 +1,103 @@
+VB Script Advanced Programming (100 Examples)
+=============================================
+
+1 Write a program to read data from a text file
+2 Write a program to write data into a text file
+3 Write a program to print all lines that contains a word either “infics” or “solutions”
+4 Write a program to print the current foldername
+5 Write a program to print files in a given folder
+6 Write a program to print subfolders in a given folder
+7 Write a program to print all drives in the file system
+8 Write a program to print current drive name
+9 Print the last modified and creation date of a given file
+10 Print the size of the file and size on the disk.
+11 Write a program to display files of a specific type
+12 Write a program to print the free space in a given drive
+13 Write a program to display all subfolders in a given folder
+14 Write a program to find whether a given folder is a special folder
+15 Write a program to remove all empty files in the folder
+16 Write a program to Copy contents of one folder to other folder
+17 Write a program to check whether a given path represents a file or a folder
+18 Write a program to compress a folder
+19 Write a program to rename a folder
+20 Write program to display all folders created on a specific date
+21 Write a Program to enable disk quotas
+22 Write a program to create, modify and delete disk quota
+23 Write a program to display all files containing “demo” in their name
+24 Write a program to print all lines in a file that ends with “world”
+25 Write a program to check whether string starts with “Error”
+26 Write a program to Replace all words that contains “demo” in a file with the word “infics”
+27 Write a program to check whether a string contains only alpha numerics
+28 Write a program to check whether a string is in email format
+29 Write a program to check whether given string is in date format
+30 Write a program to print all the lines ending with '$'
+31 Check whether middle three characters in a word contains alphanumeric
+32 Check whether a given line is an empty
+33 Write a program to Add elements to a dictionary
+34 Write a program to display items in a dictionary
+35 Write a program to check whether specified Key exists in a Dictionary
+36 Write a program to Store dictionary items in an array
+37 Write a program to delete Key Value pair in the dictionary
+38 Write a program to monitor operating system performance
+39 Write a program to monitor operating system objects
+40 Write a program to monitor web server performance
+41 Write a program to monitor browser service performance
+42 Write a program to list the PID and PPID of a process
+43 Write a program to create a registry key
+44 Write a program to list registry files
+45 Write a program to list registry value and types
+46 Write a program to delete registry key
+47 Write a program to Stop and Start alerter service
+48 Write a program to list services running and their statuses.
+49 Write a program to list services that can be stopped
+50 Write a program to start auto start services that have stopped
+51 Write a program to Invoke command prompt and execute dir command from the shell
+52 Write a program to schedule a task
+53 Write a program to list and delete scheduled tasks
+54 Write a program to add a local user account
+55 Write a program to disable and delete a local user account
+56 Write a program to list all user accounts in the local computer
+57 Write a program to display logged in user name
+58 Write a program to list cache memory information
+59 Write a program to list physical memory properties
+60 Write a program to list memory devices
+61 Write a program to find Hard Disk size
+62 Write a program to find RAM size
+63 Write a program to restart a computer
+64 Write a program to shutdown a computer
+65 Write a program to Execute Perl script from VB Script
+66 Find the systems present in the LAN
+67 Write a program to Print using remote printer
+68 Verify whether IE enhanced security is enabled for logged on user
+69 Write a program to add a website to a favourite menu
+70 Write a program to list IE LAN settings
+71 Write a program to list cache, connection and security zone settings
+72 Find the arguments passed to a Windows Script Host
+73 Write a program to Map a network drive
+74 Write a program to Print to the local printer
+75 Write a program to Print to remote printer
+76 Write a program to Print Computer name
+77 Write a program to Print free memory in the drive
+78 Write a program to Print memory and CPU utilized by a process
+79 Write a program to Find the ipaddress of a local system
+80 Write a program to find Network Drives
+81 Write a program to find the Full path name of a shortcut
+82 Write a program to Retrieve all the rows in a table
+83 Write a program to find the name of columns in a table
+84 Write a program to find number of rows in each column
+85 Write a program to connect and print data from oracle database
+86 Write a program to connect and print data from SQL Server database
+87 Write a program to retrieve specific field from the database table
+88 Write a program to check whether a column in the database is in ascending order
+89 Write a program to insert a new row into the database table
+90 Write a program to open the two record sets
+91 Write a program to Update the specific field in the database table
+92 Write a program to delete all records whose username starts with demo
+93 Write a program to sort the record set
+94 Write a program to find number of rows in a table
+95 Write a program to Write simple text to windows word
+96 Write a program to Write table to windows word
+97 Write a program to apply style to a table in word document
+98 Write a program to open and print a word document
+99 Write a program to send an email using outlook
+100 Write a program to print data present in all sheets of an excel filesHellow world!
