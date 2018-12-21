@@ -1,4 +1,45 @@
-﻿'1. Write a program to read data from a text file
+﻿systemutil.CloseProcessByName "chrome.exe"
+systemutil.Run "chrome.exe","https://www.facebook.com/", , , 3
+
+wait 5
+
+Set homePage = HomePageInstance()
+homePage.setUserName("Sharif")
+homePage.setPassword("Password")
+homePage.clickLogin()
+
+
+
+Set homePage = Nothing
+
+exittest
+
+
+Const XMLDataFile = "C:\QA\GIT\QTPWebTesting\libraries\ModelRepository\locators.xml"
+Set xmlDoc = CreateObject("Microsoft.XMLDOM")
+xmlDoc.Async = False
+xmlDoc.Load(XMLDataFile)
+
+' Getting the number of Nodes (books)
+Set nodes = xmlDoc.SelectNodes("/Pages/Page")
+Print "Total Page " & nodes.Length    ' Displays 2
+
+' get all titles
+Set nodes = xmlDoc.SelectNodes("/Pages/Page/Name/text()")
+
+' get their values
+For i = 0 To (nodes.Length - 1)
+   Title = nodes(i).NodeValue
+   Print "Title is" & (i + 1) & ": " & Title
+Next
+
+Set nodes = Nothing
+
+'lib = Environment("ProductDir")
+'msgbox lib
+'+ "\bin\Newtonsoft.Json.dll"
+
+'1. Write a program to read data from a text file
 'Call read_data_from_text_file_line_by_line()
 
 '2 Write a program to write data into a text file

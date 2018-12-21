@@ -1,0 +1,30 @@
+{
+  "SignupPage": {
+    "editUserName": {
+      "name": "q",
+      "htmlTag": "tag"
+    },
+    "editPassword": {
+      "name": "q",
+      "htmlTag": "tag"
+    },
+    "btnSignup": {
+      "name": "q",
+      "htmlTag": "tag"
+    }
+  },
+  "SigninPage": {
+    "editUserName": {
+      "name": "q",
+      "htmlTag": "tag"
+    },
+    "editPassword": {
+      "name": "q",
+      "htmlTag": "tag"
+    },
+    "btnSignup": {
+      "name": "q",
+      "htmlTag": "tag"
+    }
+  }
+}

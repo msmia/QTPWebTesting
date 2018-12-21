@@ -1,0 +1,6 @@
+<Pages>
+	<Page id='HomePage'>
+		<Name>Hello</Name>
+		<Value>Not Hello</Value>
+	</Page>
+</Pages> 
