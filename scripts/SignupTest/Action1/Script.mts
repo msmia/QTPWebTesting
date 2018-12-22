@@ -13,12 +13,13 @@ For i = 1 To rowCount
   
   un = Datatable.Value("UserName","Global")
   pw = Datatable.Value("Password","Global")
+  yr = Datatable.Value("year","Global")
 
   Set homePage = HomePageInstance()
   homePage.waitForHomePageToAppear()
   homePage.setUserName(un)
   homePage.setPassword(pw)
-  homePage.selectYear("1992")
+  homePage.selectYear(yr)
   
 
   Set homePage = Nothing

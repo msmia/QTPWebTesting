@@ -1,0 +1,5 @@
+﻿<Properties>
+  <WatchEntry0 value="filesCount" />
+  <WatchEntry1 value="filesArray" />
+  <WatchEntry2 value="counter" />
+</Properties>

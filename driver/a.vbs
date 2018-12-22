@@ -1,6 +1,32 @@
 
+pageObjects = "C:\QA\GIT\QTPWebTesting\page_objects" 
 
-Call ProjectDirectory()
+set a = listOfFiles(pageObjects)
+for i = 0 to a.count - 1
+	msgbox a(i)
+next
+
+
+Function listOfFiles(strDirectory)
+	
+	Set fso = CreateObject("Scripting.FileSystemObject")
+	set libFolder = fso.GetFolder(strDirectory)
+	
+	set filesArrayList = CreateObject("System.Collections.ArrayList")
+	
+	For each file in libFolder.files
+		filesArrayList.add(file.name)
+	Next
+
+	Set listOfFiles = filesArrayList
+	
+	Set filesArrayList = Nothing
+	Set libFolder = Nothing
+	Set fso = Nothing
+	
+End Function
+
+
 
 
 Function ProjectDirectory()
