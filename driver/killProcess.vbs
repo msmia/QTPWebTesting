@@ -1,7 +1,10 @@
-Call Kill_Process("excel.exe")
-Call Kill_Process("iexplore.exe")
-Call Kill_Process("uft.exe")
+'Call Kill_Process("excel.exe")
+'Call Kill_Process("iexplore.exe")
+'Call Kill_Process("uft.exe")
 
+
+testDir = createobject("Scripting.Filesystemobject").GetAbsolutePathName(".")
+msgbox testDir
 
 Public Function Kill_Process(strProgramName)
 

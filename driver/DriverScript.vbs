@@ -70,6 +70,7 @@ Public Function Kill_Process(strProgramName)
 	'ex: notepad.exe
 	'ex: AcroRd32.exe
 	'ex: excel.exe
+	On error resume next
 
 	Set WMI = GetObject("winmgmts:\\")
 	Set allItem = WMI.ExecQuery("Select * from Win32_Process Where Name = "&"'"&strProgramName&"'")	
@@ -77,6 +78,8 @@ Public Function Kill_Process(strProgramName)
 	For Each item in allItem
 	   	item.Terminate()
 	Next
+
+	On error goto 0
 
 End Function
 
