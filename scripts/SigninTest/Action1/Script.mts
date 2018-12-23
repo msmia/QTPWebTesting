@@ -3,9 +3,10 @@
 brw = "chrome.exe"
 systemutil.CloseProcessByName brw
 Kill_Process brw
-WebUtil.DeleteCookies
-systemutil.Run brw,"https://www.facebook.com/", , , 3
-  
+ClearBrowserHistory
+url = "www.facebook.com"
+systemutil.Run brw,url, , , 3
+
 rowCount = Datatable.GlobalSheet.GetRowCount
 
 For i = 1 To rowCount
@@ -16,15 +17,15 @@ For i = 1 To rowCount
   pw = Datatable.Value("Password","Global")
   yr = Datatable.Value("year","Global")
 
+  'Instantiate Home Page
   Set homePage = HomePageInstance()
-  homePage.waitForHomePageToAppear()
+  homePage.waitForHomePageToLoad()
   homePage.setUserName(un)
   homePage.setPassword(pw)
   homePage.selectYear(yr)
   
+Next
 
   Set homePage = Nothing
   
-Next
-
   systemutil.CloseDescendentProcesses

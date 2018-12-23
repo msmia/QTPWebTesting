@@ -1,0 +1,41 @@
+Option Explicit
+Dim FileSystemObject, RootFolder, UserName, File
+Set FileSystemObject = CreateObject("Scripting.FileSystemObject")
+
+UserName = CreateObject("WScript.Network").UserName
+RootFolder = "C:\Users\" & UserName & "\AppData\Local\Google\Chrome\User Data\"
+ 
+ProcessTerminate "chrome.exe"
+DeleteFileFromFolder RootFolder
+
+Sub DeleteFileFromFolder(Path)
+    For Each File In FileSystemObject.GetFolder(Path).Files
+        DeleteAllow File
+    Next
+    For Each File In FileSystemObject.GetFolder(Path).SubFolders
+        DeleteFileFromFolder File.Path
+    Next
+End Sub
+
+Sub DeleteAllow(File)
+    'Bookmarks remain same
+    If NOT(StrComp(Left(File.Name, 9), "Bookmarks", vbTextCompare)) = 0 Then
+        Wscript.Echo File.Path + " Deleted"    
+        On Error Resume Next
+        FileSystemObject.DeleteFile File.Path, True
+    End If
+End Sub
+
+Sub ProcessTerminate(Process)
+    Const StrComputer = "." 
+    Dim WshShell, ObjWMIService, ProcessList, ObjProcess
+    Set WshShell = CreateObject("WScript.Shell")
+    Set ObjWMIService = GetObject("winmgmts:" & "{impersonationLevel=impersonate}!\\" & StrComputer & "\root\cimv2")
+
+    Set ProcessList = ObjWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE Name = '" & Process & "'")
+    For Each ObjProcess in ProcessList 
+        On Error Resume Next
+        ObjProcess.Terminate
+        Wscript.Echo "Process Terminated, ProcessId=" & ObjProcess.ProcessId & " (" & ObjProcess.Name & ")" 
+    Next
+End Sub
