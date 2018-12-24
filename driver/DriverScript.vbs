@@ -43,36 +43,36 @@ Dim testCaseNamesArray
 
 testCaseNamesArray = array("SigninTest")
 For aa = 0 to ubound(testCaseNamesArray)
-	 qtApp.Open scriptsDir&"\"&testCaseNamesArray(aa), true
-
-
-	'****************************************'
-	'	     Function And Page Library       '
-	'****************************************'
+	qtApp.Open scriptsDir&"\"&testCaseNamesArray(aa), true
+	
+	
+'****************************************'
+'	     Function And Page Library       '
+'****************************************'
 	Dim qtLibraries, functionLibraries, pageObjects
-
+	
 	Set qtLibraries = qtApp.Test.Settings.Resources.Libraries
-		qtLibraries.RemoveAll
-
+	qtLibraries.RemoveAll
+	
 	'Associate function libraries
 	Set functionLibraries = listOfFiles(libDir)
 	for i = 0 to functionLibraries.count-1
 		qtLibraries.Add libDir &"\"& functionLibraries(i), 1
 	next
-
+	
 	'Associate pages
 	Set pageObjects = listOfFiles(pageObjectsDir)
 	for i = 0 to pageObjects.count-1
 		qtLibraries.Add pageObjectsDir &"\"& pageObjects(i), 1
 	next
-
+	
 	'Execute test'
 	Set qtTest = qtApp.Test
-		qtTest.Run ' Run the test
-
+	qtTest.Run ' Run the test
+	
 	'Close the test'
 	qtTest.Close 
-
+	
 Next
 
 
@@ -95,16 +95,16 @@ Set qtApp = Nothing
 '*****************************************************'
 
 Public Function Kill_Process(strProgramName)
-
-	'ex: notepad.exe / AcroRd32.exe / excel.exe
+	
+'ex: notepad.exe / AcroRd32.exe / excel.exe
 	On error resume next
-
+	
 	Set WMI = GetObject("winmgmts:\\")
 	Set allItem = WMI.ExecQuery("Select * from Win32_Process Where Name = "&"'"&strProgramName&"'")	
 	For Each item in allItem
-	   	item.Terminate()
+			item.Terminate()
 	Next
-
+	
 	Set WMI = Nothing
 	set allItem = Nothing
 	On error goto 0
@@ -118,17 +118,17 @@ End Function
 Function ProjectDirectory()
 	
 	On error Resume Next
-
+	
 	scriptdir = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)
 	projectFolderName = "QTPWebTesting"
-
+	
 	If not isEmpty(projectFolderName) Then
-	   If instr(1, scriptdir, projectFolderName) > - 1 Then
-		  demiliter = split(scriptdir, projectFolderName)
-		  ProjectDirectory = demiliter(0) & projectFolderName
-	   End If
+		If instr(1, scriptdir, projectFolderName) > - 1 Then
+			demiliter = split(scriptdir, projectFolderName)
+			ProjectDirectory = demiliter(0) & projectFolderName
+		End If
 	Else
-		  reporter.ReportEvent micFail, "Error number: "& err.number& " Error description: " & err.description, "" 
+		reporter.ReportEvent micFail, "Error number: "& err.number& " Error description: " & err.description, "" 
 	End If
 	
 	On Error Goto 0
@@ -151,7 +151,7 @@ Function listOfFiles(strFolderDirectory)
 	For each file in libFolder.files
 		filesArrayList.add(file.name)
 	Next
-
+	
 	Set listOfFiles = filesArrayList
 	
 	Set filesArrayList = Nothing

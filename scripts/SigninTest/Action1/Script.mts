@@ -2,8 +2,8 @@
 
 brw = "chrome.exe"
 systemutil.CloseProcessByName brw
+ClearTempFolder
 Kill_Process brw
-ClearBrowserHistory
 url = "www.facebook.com"
 systemutil.Run brw,url, , , 3
 
@@ -24,8 +24,8 @@ For i = 1 To rowCount
   homePage.setPassword(pw)
   homePage.selectYear(yr)
   
-Next
-
   Set homePage = Nothing
   
+Next
+
   systemutil.CloseDescendentProcesses
