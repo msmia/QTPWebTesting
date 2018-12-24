@@ -15,14 +15,14 @@ For i = 1 To rowCount
   pw = Datatable.Value("Password","Global")
   yr = Datatable.Value("year","Global")
 
-  Set homePage = HomePageInstance()
-  homePage.waitForHomePageToAppear()
-  homePage.setUserName(un)
-  homePage.setPassword(pw)
-  homePage.selectYear(yr)
+  Set signupPage = signupPageInstance()
+  signupPage.waitForSignupPageToLoad()
+  signupPage.setUserName(un)
+  signupPage.setPassword(pw)
+  signupPage.selectYear(yr)
   
 
-  Set homePage = Nothing
+  Set signupPage = Nothing
   
 Next
 

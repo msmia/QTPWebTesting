@@ -8,18 +8,36 @@ Call Kill_Process("iexplore.exe")
 Call Kill_Process("uft.exe")
 Call Kill_Process("chrome.exe")
 
+'============================================================'
+iResultSheetRowCounter = 2
+iTestCaseExecuting = 1
+iTotalPassed = 0
+iTotalFailed = 0
+iTotalOthers = 0
+
+
+
+
+'============================================================'
+
 'driver path
 projectDir = ProjectDirectory()
 'environment path
-environmentDir = projectDir&"\"&"environment"
+environmentDir = projectDir&"\environment"
+'Execution logs'
+logFileDir = projectDir&"\execution_logs\"
 'libraries path
-libDir = projectDir&"\"&"libraries"
+libDir = projectDir&"\libraries"
 'page_objects path'
-pageObjectsDir = projectDir&"\"&"page_objects"
+pageObjectsDir = projectDir&"\page_objects"
+'Detail Results
+detailedResultsDir = projectDir&"\results\detailed_qtp_results\"
+'Summarizied Results'
+summarizedResultsDir = projectDir&"\results\summarized_results\"
 ''page_objects path
-scriptsDir = projectDir&"\"&"scripts"
+scriptsDir = projectDir&"\scripts"
 'test_data path
-testDataDir = projectDir&"\"&"test_data" 
+testDataDir = projectDir&"\test_data" 
 
 'Create a QTP Object
 Dim qtApp, qtTest

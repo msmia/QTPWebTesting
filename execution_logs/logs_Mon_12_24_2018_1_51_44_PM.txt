@@ -1,0 +1,22 @@
+Mon_12_24_2018_1_57_10_PM : Test started.
+Mon_12_24_2018_1_57_10_PM : ==================
+Mon_12_24_2018_1_57_29_PM : Home page loaded successfully. TestName: SigninTest
+Mon_12_24_2018_1_57_30_PM : Found username field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_30_PM : Found password field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_30_PM : Year was selected successfully from the web list. TestName: SigninTest
+Mon_12_24_2018_1_57_31_PM : Home page loaded successfully. TestName: SigninTest
+Mon_12_24_2018_1_57_31_PM : Found username field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_32_PM : Found password field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_32_PM : Year was selected successfully from the web list. TestName: SigninTest
+Mon_12_24_2018_1_57_32_PM : Home page loaded successfully. TestName: SigninTest
+Mon_12_24_2018_1_57_33_PM : Found username field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_33_PM : Found password field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_33_PM : Year was selected successfully from the web list. TestName: SigninTest
+Mon_12_24_2018_1_57_34_PM : Home page loaded successfully. TestName: SigninTest
+Mon_12_24_2018_1_57_34_PM : Found username field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_34_PM : Found password field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_35_PM : Year was selected successfully from the web list. TestName: SigninTest
+Mon_12_24_2018_1_57_35_PM : Home page loaded successfully. TestName: SigninTest
+Mon_12_24_2018_1_57_35_PM : Found username field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_36_PM : Found password field on the Home page. TestName: SigninTest
+Mon_12_24_2018_1_57_36_PM : Year was selected successfully from the web list. TestName: SigninTest

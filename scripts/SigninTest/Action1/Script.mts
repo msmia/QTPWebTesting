@@ -1,11 +1,16 @@
 ﻿
 
+
 brw = "chrome.exe"
 systemutil.CloseProcessByName brw
 ClearTempFolder
 Kill_Process brw
+Kill_Process "sublime_text.exe"
 url = "www.facebook.com"
 systemutil.Run brw,url, , , 3
+
+call logger("", "Test started.")
+call logger("","==================")
 
 rowCount = Datatable.GlobalSheet.GetRowCount
 
