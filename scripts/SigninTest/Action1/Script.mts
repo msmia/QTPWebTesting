@@ -1,5 +1,16 @@
 ﻿
+a = array(1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5)
+Set oDict = CreateObject("Scripting.Dictionary")
 
+for each ax in a
+	oDict(ax) = 0
+next
+
+print join(oDict.Keys())
+
+Set oDict = Nothing
+
+exittest
 
 brw = "chrome.exe"
 systemutil.CloseProcessByName brw
