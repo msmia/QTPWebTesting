@@ -1,4 +1,36 @@
-﻿systemutil.CloseProcessByName "chrome.exe"
+﻿
+
+str = read_data_from_text_file_line_by_line
+If instr(1, lcase(str), "subfolder") > -1 Then
+	msgbox "Yes"
+End If
+
+'1. Write a program to read data from a text file
+Function read_data_from_text_file_line_by_line()
+	
+	projectDir = ProjectDirectory()
+	testDataPath =  projectDir & "\test_data\testFolder1\testFolder3\testFolder4\testFolder5\testFile1.txt" 
+	
+	Set fso = CreateObject("Scripting.FileSystemObject")
+	set file = fso.OpenTextFile(testDataPath)
+	
+	Do until file.AtEndOfStream
+		line = file.ReadLine
+		If line = "" Then
+			
+		End If
+	Loop
+	
+	Set file = Nothing
+	Set fso = Nothing
+	
+	'read_data_from_text_file_line_by_line = f
+	
+End Function
+
+exittest
+
+systemutil.CloseProcessByName "chrome.exe"
 systemutil.Run "chrome.exe","https://www.facebook.com/", , , 3
 
 wait 5

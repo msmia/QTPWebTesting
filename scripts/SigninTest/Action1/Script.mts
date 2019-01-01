@@ -1,47 +1,74 @@
 ﻿
-a = array(1,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5)
-Set oDict = CreateObject("Scripting.Dictionary")
 
-for each ax in a
-	oDict(ax) = 0
-next
 
-print join(oDict.Keys())
+'Start loggin information
+call logger("", "============")
+call logger("", "Test started.")
+call logger("", "============")
 
-Set oDict = Nothing
-
-exittest
-
+'Declare variables
 brw = "chrome.exe"
-systemutil.CloseProcessByName brw
+
+
+'Close appications
 ClearTempFolder
-Kill_Process brw
-Kill_Process "sublime_text.exe"
+Call Kill_Process("excel.exe")
+Call Kill_Process("iexplore.exe")
+Call Kill_Process("chrome.exe")
+Call Kill_Process("sublime_text.exe")
+
 url = "www.facebook.com"
 systemutil.Run brw,url, , , 3
 
-call logger("", "Test started.")
-call logger("","==================")
 
-rowCount = Datatable.GlobalSheet.GetRowCount
+'Prepare the test data
+projectFolder = "C:\QA\GIT\QTPWebTesting\"
+testDataFolderPath = projectFolder & "test_data\"
 
-For i = 1 To rowCount
+xlTestCaseFile = "TestCaseNames.xlsx"
+xlTestDataFile = "TestData.xlsx"
 
-  Datatable.SetCurrentRow(i)
+'Import test case names
+shTCnames = "TC_ID"
+datatable.AddSheet shTCnames
+datatable.ImportSheet testDataFolderPath & xlTestCaseFile, shTCnames, shTCnames
+
+
+'Instantiate required classes
+Set homePage = HomePageInstance()
+
+
+
+'Test Cases
+'==========
+'==========
+rowCount = Datatable.GetSheet(shTCnames).GetRowCount
+
+For mainLoop = 1 To rowCount
+
+  Datatable.GetSheet(shTCnames).SetCurrentRow(mainLoop)
   
-  un = Datatable.Value("UserName","Global")
-  pw = Datatable.Value("Password","Global")
-  yr = Datatable.Value("year","Global")
-
-  'Instantiate Home Page
-  Set homePage = HomePageInstance()
-  homePage.waitForHomePageToLoad()
-  homePage.setUserName(un)
-  homePage.setPassword(pw)
-  homePage.selectYear(yr)
+  tcName = datatable.Value("TC_ID", shTCnames)
+  execFlag = datatable.Value("ExecutinFlag", shTCnames)
   
-  Set homePage = Nothing
+  If Ucase(execFlag) = "Y" Then
+  
+  	If Trim(tcName) = "001_GoodSignin" Then
+  	
+  	   Call logger("","001_GoodSignin is not ready yet.")
+  	   
+  	ElseIf Trim(tcName) = "002_BadSignin" Then
+  	
+  	   shBadSignin = "BadSignin"
+	   datatable.AddSheet shBadSignin
+	   datatable.ImportSheet testDataFolderPath & xlTestDataFile, shBadSignin, shBadSignin
+  	   Call badSignin(homePage, shBadSignin)
+  	   
+  	End If
+  End If
   
 Next
 
-  systemutil.CloseDescendentProcesses
+'Release classes memories
+Set homePage = Nothing
+

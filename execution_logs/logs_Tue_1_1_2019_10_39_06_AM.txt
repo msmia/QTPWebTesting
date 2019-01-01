@@ -1,0 +1,23 @@
+Tue_1_1_2019_10_39_06_AM : Test started.
+Tue_1_1_2019_10_39_06_AM : ============
+Tue_1_1_2019_10_39_17_AM : 001_GoodSignin is not ready yet.
+Tue_1_1_2019_10_39_18_AM : Home page loaded successfully. TestName: SigninTest
+Tue_1_1_2019_10_39_18_AM : Found username field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_18_AM : Found password field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_18_AM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_1_2019_10_39_18_AM : Home page loaded successfully. TestName: SigninTest
+Tue_1_1_2019_10_39_19_AM : Found username field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_19_AM : Found password field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_19_AM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_1_2019_10_39_19_AM : Home page loaded successfully. TestName: SigninTest
+Tue_1_1_2019_10_39_19_AM : Found username field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_20_AM : Found password field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_20_AM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_1_2019_10_39_20_AM : Home page loaded successfully. TestName: SigninTest
+Tue_1_1_2019_10_39_20_AM : Found username field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_20_AM : Found password field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_21_AM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_1_2019_10_39_21_AM : Home page loaded successfully. TestName: SigninTest
+Tue_1_1_2019_10_39_21_AM : Found username field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_21_AM : Found password field on the Home page. TestName: SigninTest
+Tue_1_1_2019_10_39_22_AM : Year was selected successfully from the web list. TestName: SigninTest
