@@ -1,4 +1,21 @@
-﻿
+﻿url = "www.facebook.com"
+systemutil.Run "chrome.exe",url, , , 3
+
+exittest
+
+set list = CreateObject("System.Collections.ArrayList")
+	list.add("a")
+	list.add("b")
+	
+	if list.Find("a") then 
+		msgbox "yes"
+	end if		
+	
+	
+	
+	Set list = Nothing
+
+exittest
 
 
 'Start loggin information
@@ -16,6 +33,7 @@ Call Kill_Process("excel.exe")
 Call Kill_Process("iexplore.exe")
 Call Kill_Process("chrome.exe")
 Call Kill_Process("sublime_text.exe")
+Wait (2)
 
 url = "www.facebook.com"
 systemutil.Run brw,url, , , 3
