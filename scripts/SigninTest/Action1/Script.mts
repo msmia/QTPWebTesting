@@ -1,22 +1,9 @@
-﻿url = "www.facebook.com"
+﻿
+
+url = "www.facebook.com"
 systemutil.Run "chrome.exe",url, , , 3
 
 exittest
-
-set list = CreateObject("System.Collections.ArrayList")
-	list.add("a")
-	list.add("b")
-	
-	if list.Find("a") then 
-		msgbox "yes"
-	end if		
-	
-	
-	
-	Set list = Nothing
-
-exittest
-
 
 'Start loggin information
 call logger("", "============")
