@@ -173,3 +173,38 @@ Sat_1_5_2019_1_18_00_PM : Found password field on the Home page. TestName: Signi
 Sat_1_5_2019_1_18_00_PM : Found First Name field on the Home page. TestName: SigninTest
 Sat_1_5_2019_1_18_00_PM : Year was selected successfully from the web list. TestName: SigninTest
 Sat_1_5_2019_1_18_00_PM : username value: gfeawfre
+Wed_1_16_2019_6_47_57_PM : ============
+Wed_1_16_2019_6_47_57_PM : Test started.
+Wed_1_16_2019_6_47_57_PM : ============
+Wed_1_16_2019_6_48_14_PM : 001_GoodSignin is not ready yet.
+Wed_1_16_2019_6_48_14_PM : 002_BadSignin is running now.
+Wed_1_16_2019_6_48_14_PM : Home page loaded successfully. TestName: SigninTest
+Wed_1_16_2019_6_48_15_PM : Found username field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_15_PM : Found password field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_15_PM : Found First Name field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : Year was selected successfully from the web list. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : username value: abcd
+Wed_1_16_2019_6_48_16_PM : Home page loaded successfully. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : Found username field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : Found password field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : Found First Name field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_16_PM : Year was selected successfully from the web list. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : username value: ef
+Wed_1_16_2019_6_48_17_PM : Home page loaded successfully. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : Found username field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : Found password field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : Found First Name field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : Year was selected successfully from the web list. TestName: SigninTest
+Wed_1_16_2019_6_48_17_PM : username value: gr
+Wed_1_16_2019_6_48_17_PM : Home page loaded successfully. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : Found username field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : Found password field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : Found First Name field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : Year was selected successfully from the web list. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : username value: weeee
+Wed_1_16_2019_6_48_18_PM : Home page loaded successfully. TestName: SigninTest
+Wed_1_16_2019_6_48_18_PM : Found username field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_19_PM : Found password field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_19_PM : Found First Name field on the Home page. TestName: SigninTest
+Wed_1_16_2019_6_48_19_PM : Year was selected successfully from the web list. TestName: SigninTest
+Wed_1_16_2019_6_48_19_PM : username value: gfeawfre
