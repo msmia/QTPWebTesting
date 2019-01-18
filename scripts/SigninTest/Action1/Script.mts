@@ -1,79 +1,86 @@
-﻿
-
-url = "www.facebook.com"
-systemutil.Run "chrome.exe",url, , , 3
-
-exittest
-
-'Start loggin information
-call logger("", "============")
-call logger("", "Test started.")
-call logger("", "============")
-
-'Declare variables
-brw = "chrome.exe"
+﻿'url = "www.facebook.com"
+'systemutil.Run "chrome.exe",url, , , 3
+'exittest
+	
 
 
-'Close appications
-ClearTempFolder
-Call Kill_Process("excel.exe")
-Call Kill_Process("iexplore.exe")
-Call Kill_Process("chrome.exe")
-Call Kill_Process("sublime_text.exe")
-Wait (2)
-
-url = "www.facebook.com"
-systemutil.Run brw,url, , , 3
+'***********'
+'*	Setup  *'
+'***********'
 
 
-'Prepare the test data
-projectFolder = "C:\QA\GIT\QTPWebTesting\"
-testDataFolderPath = projectFolder & "test_data\"
-
-xlTestCaseFile = "TestCaseNames.xlsx"
-xlTestDataFile = "TestData.xlsx"
-
-'Import test case names
-shTCnames = "TC_ID"
-datatable.AddSheet shTCnames
-datatable.ImportSheet testDataFolderPath & xlTestCaseFile, shTCnames, shTCnames
+	'Close appications
+	Call Kill_Process("excel.exe")
+	Call Kill_Process("iexplore.exe")
+	Call Kill_Process("chrome.exe")
+	Call Kill_Process("sublime_text.exe")
 
 
-'Instantiate required classes
-Set homePage = HomePageInstance()
+	'Project path
+	projectPath = ProjectDirectory("QTPWebTesting")
+	'test data path
+	testDataFolderPath = projectPath & "test_data\"
+
+	
+	Wait (2)
 
 
+	'Open Browser
+	systemutil.Run Environment.Value("chrome"), Environment.Value("url"), , , 3
+	
+	
+	'Instantiate classes
+	Set homePage = HomePageInstance()
 
-'Test Cases
-'==========
-'==========
-rowCount = Datatable.GetSheet(shTCnames).GetRowCount
 
-For mainLoop = 1 To rowCount
+'**********'
+'*	Test  *'
+'**********'
+	
+	
+	'Start loggin information
+	Call logger("", "============ Test started. ============")
+	
+		
+	'Import test case names sheet
+	shTCnames = "TestCaseNames"
+	ExcelFile = testDataFolderPath & "Config.xlsx"
+	fnImportSheet ExcelFile, shTCnames
+	
+	rowCount = Datatable.GetSheet(shTCnames).GetRowCount
+	
+	For mainLoop = 1 To rowCount
+	
+	  Datatable.GetSheet(shTCnames).SetCurrentRow(mainLoop)
+	  
+	  tcName   = datatable.Value("TC_ID", shTCnames)
+	  execFlag = datatable.Value("ExecutinFlag", shTCnames)
+	  
+	 'Flag = Y
+	  If Ucase(execFlag) = "Y" Then
+	  
+	  	If Trim(tcName) = "001_GoodSignin" Then
+	  	
+	  	   'Script not ready yet
+	  	 	
+	  	ElseIf Trim(tcName) = "002_BadSignin" Then
+	  	
+		   shBadSignin = "BadSignin"
+		   ExcelFile = testDataFolderPath & "TestData.xlsx"
+		   fnImportSheet ExcelFile, shBadSignin
+	  	   Call badSignin(homePage, shBadSignin)
 
-  Datatable.GetSheet(shTCnames).SetCurrentRow(mainLoop)
-  
-  tcName = datatable.Value("TC_ID", shTCnames)
-  execFlag = datatable.Value("ExecutinFlag", shTCnames)
-  
-  If Ucase(execFlag) = "Y" Then
-  
-  	If Trim(tcName) = "001_GoodSignin" Then
-  	
-  	   Call logger("","001_GoodSignin is not ready yet.")
-  	   
-  	ElseIf Trim(tcName) = "002_BadSignin" Then
-  	
-  	   shBadSignin = "BadSignin"
-	   datatable.AddSheet shBadSignin
-	   datatable.ImportSheet testDataFolderPath & xlTestDataFile, shBadSignin, shBadSignin
-  	   Call badSignin(homePage, shBadSignin)
-  	   
-  	End If
-  End If
-  
-Next
-
-'Release classes memories
-Set homePage = Nothing
+	  	End If
+	  	
+	  End If
+	  
+	Next
+	
+	
+	'Delete imported sheets
+	Datatable.DeleteSheet shBadSignin
+	Datatable.DeleteSheet shTCnames
+	
+	'Release classes memories
+	Set homePage = Nothing
 
