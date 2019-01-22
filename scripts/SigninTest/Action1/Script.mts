@@ -14,10 +14,11 @@
 	Call Kill_Process("iexplore.exe")
 	Call Kill_Process("chrome.exe")
 	Call Kill_Process("sublime_text.exe")
-
-
+	
+	'Name of the project
+	projectName = Environment.Value("projectName")
 	'Project path
-	projectPath = ProjectDirectory("QTPWebTesting")
+	projectPath = ProjectDirectory(projectName)
 	'test data path
 	testDataFolderPath = projectPath & "test_data\"
 
