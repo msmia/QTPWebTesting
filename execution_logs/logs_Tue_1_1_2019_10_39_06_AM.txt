@@ -1592,3 +1592,31 @@ Tue_1_22_2019_4_25_35_PM : Found username field on the Home page. TestName: Sign
 Tue_1_22_2019_4_25_36_PM : Found password field on the Home page. TestName: SigninTest
 Tue_1_22_2019_4_25_36_PM : Found First Name field on the Home page. TestName: SigninTest
 Tue_1_22_2019_4_25_36_PM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_22_2019_5_56_02_PM : ============ Test started. ============
+Tue_1_22_2019_5_57_53_PM : ============ Test started. ============
+Tue_1_22_2019_5_57_54_PM : 002_BadSignin is running now.
+Tue_1_22_2019_5_57_57_PM : Home page loaded successfully. TestName: SigninTest
+Tue_1_22_2019_5_57_57_PM : Found username field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_58_PM : Found password field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_58_PM : Found First Name field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_58_PM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_22_2019_5_57_58_PM : Home page loaded successfully. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Found username field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Found password field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Found First Name field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Home page loaded successfully. TestName: SigninTest
+Tue_1_22_2019_5_57_59_PM : Found username field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_00_PM : Found password field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_00_PM : Found First Name field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_01_PM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_22_2019_5_58_01_PM : Home page loaded successfully. TestName: SigninTest
+Tue_1_22_2019_5_58_01_PM : Found username field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_01_PM : Found password field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_01_PM : Found First Name field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_02_PM : Year was selected successfully from the web list. TestName: SigninTest
+Tue_1_22_2019_5_58_02_PM : Home page loaded successfully. TestName: SigninTest
+Tue_1_22_2019_5_58_02_PM : Found username field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_02_PM : Found password field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_02_PM : Found First Name field on the Home page. TestName: SigninTest
+Tue_1_22_2019_5_58_03_PM : Year was selected successfully from the web list. TestName: SigninTest

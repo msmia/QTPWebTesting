@@ -1,33 +1,45 @@
-﻿'url = "www.facebook.com"
-'systemutil.Run "chrome.exe",url, , , 3
-'exittest
-	
-
+﻿
 
 '***********'
 '*	Setup  *'
 '***********'
-
-
+	
+	'Name of the project
+	projectName = Environment.Value("projectName")
+	'Project path
+	projectPath = ProjectDirectory(projectName)
+	'environment path
+	environmentPath = projectPath&"environment"
+	'Execution logs'
+	logFilePath = projectPath&"execution_logs"
+	'libraries path
+	libPath = projectPath&"libraries"
+	'page_objects path'
+	pageObjectsPath = projectPath&"page_objects"
+	'Detail Results
+	detailedResultsPath = projectPath&"results\detailed_qtp_results"
+	'Summarizied Results'
+	summarizedResultsPath = projectPath&"results\summarized_results"
+	'page_objects path
+	scriptsPath = projectPath&"scripts"
+	'test data path
+	testDataFolderPath = projectPath & "test_data\"
+	'Browser
+	strBrowser = Environment.Value("chrome")
+	'Url
+	strUrl = Environment.Value("url")
+	
+	'Call associateFiles(libPath)
 	'Close appications
 	Call Kill_Process("excel.exe")
 	Call Kill_Process("iexplore.exe")
 	Call Kill_Process("chrome.exe")
 	Call Kill_Process("sublime_text.exe")
 	
-	'Name of the project
-	projectName = Environment.Value("projectName")
-	'Project path
-	projectPath = ProjectDirectory(projectName)
-	'test data path
-	testDataFolderPath = projectPath & "test_data\"
-
-	
 	Wait (2)
 
-
 	'Open Browser
-	systemutil.Run Environment.Value("chrome"), Environment.Value("url"), , , 3
+	systemutil.Run strBrowser, strUrl, , , 3
 	
 	
 	'Instantiate classes
@@ -85,3 +97,51 @@
 	'Release classes memories
 	Set homePage = Nothing
 
+
+
+
+
+
+''*********************'
+''Get project directory'
+''*********************'
+'Function ProjectDirectory(projectName)
+'	
+'	On error Resume Next
+'	
+'	testActionPath = Environment.Value("TestDir")
+'	'projectName = "QTPWebTesting"
+'	
+'	If not isEmpty(projectName) Then
+'		If instr(1, testActionPath, projectName) > - 1 Then
+'			demiliter = split(testActionPath, projectName)
+'			ProjectDirectory = demiliter(0) & projectName & "\"
+'		End If
+'	Else
+'		reporter.ReportEvent micFail, "Error number: "& err.number& " Error description: " & err.description, "" 
+'	End If
+'	
+'	On Error Goto 0
+'End Function
+'
+'
+''***************'
+''Associate Files'
+''***************'
+'Function associateFiles(folderPath)
+'
+'	Set fso= CreateObject("Scripting.FileSystemObject")
+'	Set f = fso.GetFolder(folderPath)
+'	Set fc = f.files
+'	  For Each singlefile in fc
+'		  strName = split(lcase(singlefile.name), ".")
+'		  If instr(1, strName(1), "qfl") > - 1 OR instr(1, strName(1), "txt") > - 1 Then
+'		  	file = folderPath&"\"&singlefile.name
+'		  	ExecuteFile file
+'		  End If
+'	 Next
+'	 
+'	Set fso = Nothing
+'	Set f = Nothing
+'	Set fc = Nothing
+'End Function 
